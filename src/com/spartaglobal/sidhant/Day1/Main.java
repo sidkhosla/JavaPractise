@@ -1,13 +1,13 @@
-package com.spartaglobal.sidhant.Day1;
-
-import jdk.swing.interop.SwingInterOpUtils;
-
-import java.util.Random;
-import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
+//package com.spartaglobal.sidhant.Day1;
+//
+//import jdk.swing.interop.SwingInterOpUtils;
+//
+//import java.util.Random;
+//import java.util.Scanner;
+//
+//public class Main {
+//
+//    public static void main(String[] args) {
 //        Random rd = new Random();
 //        int a = rd.nextInt(100);
 //        int c = rd.hashCode();
@@ -96,6 +96,6 @@ public class Main {
 //        }
         // String function and its methods
         // .split in strings
-        }
-
-    }
+//        }
+//
+//    }
