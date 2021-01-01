@@ -5,7 +5,7 @@
 //import java.util.Random;
 //import java.util.Scanner;
 //
-//public class Main {
+//public class OverridingAndOverloading {
 //
 //    public static void main(String[] args) {
 //        Random rd = new Random();

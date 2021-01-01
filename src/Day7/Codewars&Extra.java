@@ -1,6 +1,6 @@
 package Day7;
 
-//public class Main {
+//public class OverridingAndOverloading {
 //    //---get 5 values an arrays if the user adds a duplicate value prompt the user of the error and ask again.
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
@@ -27,7 +27,7 @@ package Day7;
 
 //Write function alternateCase which switch every letter in string from upper to lower and from lower to upper.
 // E.g: Hello World -> hELLO wORLD
-//    class Main {
+//    class OverridingAndOverloading {
 //        private static String st="";
 //
 //        public static String alternateCase(final String string) {

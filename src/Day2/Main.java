@@ -2,7 +2,7 @@
 //
 //import java.util.Scanner;
 //
-//public class Main {
+//public class OverridingAndOverloading {
 //    public static void main(String[] args) {
 //        //----Understanding array and for loops
 ////        int s = 10;
