@@ -7,12 +7,9 @@ public class OverridingAndOverloading {
     public static void method1() {
         System.out.println("method1");
     }
-
     public static void method2() {
         System.out.println("method2");
     }
-
-
 //--Overriding method this is used to use the same name of a method but with a different
 // code which would be only usable in the class that extends the main class.
 //class mainExtender extends OverridingAndOverloading {
@@ -36,7 +33,6 @@ public class OverridingAndOverloading {
             return a + b + c;
         }
     }
-
 //---Example of overriding with the timer function
     public  static void ok(){
         Timer tmr=new Timer();
