@@ -41,7 +41,9 @@ class inheritance {
     }
 }
 class gettingValues {
+
     static inheritance[] in = null;
+
     static Scanner sc = new Scanner(System.in);
     static Scanner scstr = new Scanner(System.in);
 
@@ -129,11 +131,8 @@ class gettingValues {
         }
         if (b == 0) {
             System.out.println("No Match");
-
         }
-
     }
-
     //---Search and edit.
     public static void searchAndChange(int t) {
         System.out.println("Enter the roll number you want to change the record for: ");
