@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 //----Q.You get an array of numbers, return the sum of all of the positives ones.
 // Example [1,-4,7,12] => 1 + 7 + 12 = 20
-//public class OverridingAndOverloading {
-//        public static class Positive {
+class OverridingAndOverloading {
+    //        public static class Positive {
 //            public static int sum(int[] arr) {
 //                int sum = 0;
 //                for (int i = 0; i < arr.length; i++) {
@@ -40,13 +40,13 @@ import java.util.Scanner;
 //        return (int) Math.floor(time / 2);
 //    }
 //}
-public class Main {
-    //--Print number of repeating alphabets in a string
+//public class Main {
+////    --Print number of repeating alphabets in a string
 //    public static void main(String[] args) {
-//        String strAll = "sidHantTnahdiS";
+//        String strAll = "sidHantTnahdiSs";
 //        String str = strAll.toLowerCase();
 //        int y = 0;
-//        String nw = "";
+//        StringBuilder nw = new StringBuilder();
 //        for (int i = 0; i < str.length(); i++) {
 //                for (int j = 0; j < str.length(); j++) {
 //                    if (str.charAt(i) == str.charAt(j)) {
@@ -54,17 +54,17 @@ public class Main {
 //                    }
 //                }
 //                String h = ""+str.charAt(i);
-//                if(nw.contains(h)){
+//                if(nw.toString().contains(h)){
 //
 //                }else{
-//                    nw=nw+h;
+//                    nw.append(h);
 //                    System.out.println(h+"  "+y);
 //                }
 //                y = 0;
 //            }
 //        }
 //----get input from usser to tget the size of an array. Add all the elements of an array and store the sum to be the value of all the elements of that same array.
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter the size of the array: ");
 //        int z = sc.nextInt();
@@ -107,18 +107,20 @@ public class Main {
 //        System.out.println(Arrays.toString(finalArray));
 //    }
 // array with 6 values swap the elements with their consecutive numbers.
-//
-//        int[] arrayUnswapped={2,1,4,3,6,5,8,7};
-//        int length = arrayUnswapped.length;
-//        int[] finalArray = new int[length];
-//        for(int i=0;i<arrayUnswapped.length;i=i+2){
-//            int temp = arrayUnswapped[i];
-//            arrayUnswapped[i]=arrayUnswapped[i+1];
-//            arrayUnswapped[i+1]=temp;
-//
-//
-//        }
-//        System.out.println(Arrays.toString(arrayUnswapped));
+    public static void main(String[] args) {
+
+
+        int[] arrayUnswapped = {2, 1, 4, 3, 6, 5, 8, 7};
+        int length = arrayUnswapped.length;
+        int[] finalArray = new int[length];
+        for (int i = 0; i < arrayUnswapped.length; i = i + 2) {
+            int temp = arrayUnswapped[i];
+            arrayUnswapped[i] = arrayUnswapped[i + 1];
+            arrayUnswapped[i + 1] = temp;
+
+
+        }
+        System.out.println(Arrays.toString(arrayUnswapped));
 //
 //
 //
