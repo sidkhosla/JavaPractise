@@ -1,7 +1,7 @@
 package CodeWarsPractise;
 
 public class Practise {
-
+//mini calculator function for java fundamentals fresher
     public static void calcEngine() {
         double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
         double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
