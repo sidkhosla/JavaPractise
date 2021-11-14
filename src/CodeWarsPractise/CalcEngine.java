@@ -73,7 +73,6 @@ public class CalcEngine {
         System.out.println(output);
     }
 
-
     private static char symbolFromOpCode(char opCode){
         char[] opCodes = {'a', 's', 'm', 'd'};
         char[] symbols = {'+', '-', '*', '/'};
