@@ -1,4 +1,4 @@
-package CodeWarsPractise;
+package JavaFundamentals;
 
 import java.time.LocalDate;
 import java.util.Scanner;
