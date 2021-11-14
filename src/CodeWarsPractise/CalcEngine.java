@@ -1,6 +1,6 @@
 package CodeWarsPractise;
 
-import java.sql.PreparedStatement;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class CalcEngine {
@@ -24,6 +24,7 @@ public class CalcEngine {
         else
             System.out.println("Please provide an operation code and 2 numeric values");
     }
+//    Scanner
     static void executeInteractively(){
         System.out.println("Enter an operation and two numbers");
         Scanner scanner = new Scanner(System.in);
@@ -34,10 +35,56 @@ public class CalcEngine {
 
     private static void performOperation(String[] parts) {
         char opCode = opCodeFromString(parts[0]);
-        double leftVal = valueFromWord(parts[1]);
-        double rightVal = valueFromWord(parts[2]);
-        double result = execute(opCode, leftVal, rightVal);
-        System.out.println(result);
+        if (opCode == 'w')
+            handleWhen(parts);
+        else {
+
+            double leftVal = valueFromWord(parts[1]);
+            double rightVal = valueFromWord(parts[2]);
+            double result = execute(opCode, leftVal, rightVal);
+            displayResult(opCode, leftVal, rightVal, result);
+        }
+    }
+//Using Local date
+    private static void handleWhen(String[] parts) {
+        LocalDate startDate = LocalDate.parse(parts[1]);
+        long daysToAdd = (long) valueFromWord(parts[2]);
+        LocalDate newDate = startDate.plusDays(daysToAdd);
+        String output = String.format("%s plus %d days is %s", startDate, daysToAdd, newDate);
+        System.out.println(output);
+    }
+
+    private static void displayResult(char opCode, double leftVal, double rightVal, double result) {
+        char symbol = symbolFromOpCode(opCode);
+//String Builder
+//        StringBuilder builder = new StringBuilder(20);
+//        builder.append(leftVal);
+//        builder.append(" ");
+//        builder.append(symbol);
+//        builder.append(" ");
+//        builder.append(rightVal);
+//        builder.append(" = ");
+//        builder.append(result);
+//        String output = builder.toString();
+//        System.out.println(output);
+
+// String format----
+        String output = String.format("%.2f %c %.2f = %.2f", leftVal, symbol, rightVal, result);
+        System.out.println(output);
+    }
+
+
+    private static char symbolFromOpCode(char opCode){
+        char[] opCodes = {'a', 's', 'm', 'd'};
+        char[] symbols = {'+', '-', '*', '/'};
+        char symbol = ' ';
+        for (int index = 0; index < opCodes.length; index++){
+            if(opCode == opCodes[index]){
+                symbol = symbols[index];
+                break;
+            }
+        }
+        return symbol;
     }
 
     private static void handleCommandLine(String[] args) {
@@ -47,7 +94,7 @@ public class CalcEngine {
         double result = execute(opCode, leftVal, rightVal);
         System.out.println(result);
     }
-
+// Switch statement
     static double execute(char opCode, double leftVal, double rightVal) {
         double result;
         switch (opCode) {
@@ -75,19 +122,21 @@ public class CalcEngine {
     static char opCodeFromString(String operationName){
         return operationName.charAt(0);
     }
-
+// Parallel arrays
     static double valueFromWord(String word){
         String[] numberWords = {
                 "zero", "one", "two", "three", "four",
                 "five", "six", "seven", "eight", "nine"
         };
-        double value = 0d;
+        double value = -1d;
         for (int index = 0; index < numberWords.length; index++){
             if (word.equals(numberWords[index])) {
                 value = index;
                 break;
             }
         }
+        if(value == -1d)
+            value = Double.parseDouble(word);
         return value;
     }
 }
